@@ -1,0 +1,375 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+.flash-msg {
+  display: none;
+  width: 40%;
+  text-align: center;
+  margin: 0 auto;
+  font-family: 'Raleway', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 0.8em;
+  color: white;
+  background: linear-gradient(to right, #EC5050, #972626);
+  border-radius: 3px;
+  top: 1.5em;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.triangle-corner {
+    right: -16em;
+    border-left: 16em solid transparent;
+	  border-right: 16em solid transparent;
+    border-bottom: 16em solid #3F454A;
+    top: -3em;
+    transform: rotate(45deg);
+    position: fixed;
+    z-index: -1;
+}
+
+
+header {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.logo img {
+    width: 3.8%;
+}
+
+section {
+    text-align: center;
+}
+
+.app-description {
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+h1 {
+    font-size: 45px;
+}
+
+.subhead {
+    font-size: 21px;
+    margin-top: -0.6em;
+}
+
+
+.helper-text {
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0 1.5em;
+  display: inline-block;
+}
+
+
+/* Select menu */
+.select-menu{
+  position: relative;
+  width: 12%;
+  display: inline-block;
+  border-radius: 3px;
+}
+
+.select-menu select {
+  display: none;
+  z-index: 10;
+  border-radius: 3px;
+  position: absolute;
+  padding: 0;
+}
+
+.select-selected {
+  background: linear-gradient(to right, #2F78AA, #004B7D);
+  color: white;
+  border-radius: 3px;
+  font-weight: 550;
+}
+.select-items div, .select-selected {
+  padding: 0.8em;
+  text-align: center;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.select-items {
+  position: absolute;
+  background-color: white;
+  top: 120%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  border: solid 1px gray;
+  border-radius: 3px;
+  /* font-size: 14px; */
+}
+.select-hide {
+  display: none;
+}
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+/* End select menu */
+
+.form-app {
+    margin-top: 50px;
+}
+input {
+    font-family: 'Questrial', sans-serif;
+    font-size: 16px;
+}
+.input-number {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    text-decoration: none;
+    border-bottom: solid 1.2px #3D3D3D;
+    width: 28%;
+    padding-bottom: 4px;
+    padding-left: 2px;
+}
+
+.btn-show-result {
+    position: absolute;
+    background: inherit;
+    border: solid 1.5px #154261;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    border-radius: 3px;
+    color: #154261;
+    cursor: pointer;
+    padding: 0.6em 2.2em;
+    margin-top: -1.2em;
+    margin-left: 2em;
+}
+
+.output-conversion {
+  font-size: 28px;
+  font-weight: 550;
+  font-family: 'Questrial', sans-serif;
+  letter-spacing: 5px;
+  text-align: center;
+  margin-top: 1.8em;
+  display: none;
+}
+
+footer {
+    background: #3F454A;
+    height: 10%;
+    left: 0;
+    bottom: 0;
+    margin: 0;
+    position: absolute;
+    width: 100%;
+    right: 0;
+    z-index: 1;
+}
+
+.footer-container {
+  position: relative;
+}
+
+.footer-links {
+    list-style-type: none;
+    display: block;
+}
+
+.footer-links li {
+    display: inline-block;
+    font-size: 14px;
+    margin-top: 1.2em;
+    z-index: 1000;
+}
+
+.footer-links li:first-child {
+    /* float: left; */
+    position: absolute;
+    left: 0;
+    margin-left: 5.5em;
+    color: #fff;
+}
+
+.footer-links li:nth-child(2) {
+    float: right;
+    margin-right: 6em;
+    /* right: 0; */
+    color: #fff;
+}
+
+.footer-links li a {
+    font-weight: 600;
+    color: black;
+    text-decoration: none;
+    
+}
+
+
+/* Only for small screen devices */
+@media only screen and (max-width: 750px) {
+    .triangle-corner {
+        border-left: 12em solid transparent;
+        border-right: 12em solid transparent;
+        border-bottom: 12em solid #3F454A;
+    }
+    .logo img {
+        width: 11%;
+    }
+    .app-description {
+        margin-bottom: 50px;
+    }
+    h1 {
+        font-size: 2.1em;
+        padding: 0 0.5em;
+    }
+    .subhead {
+        font-size: 16px;
+        padding: 0 1.5em;
+        line-height: 1.5em;
+    }
+    .form-app * {
+        display: block;
+    }
+    .form-app {
+        text-align: center;
+    }
+    .select-menu{
+      width: 28%;
+    }
+    .btn-show-result {
+        padding: 0.7em 2.5em;
+        margin: 0 auto;
+        position: relative;
+        margin-top: 2em;
+    }
+    .input-number {
+      margin: 0 auto;
+      width: 72%;
+    }
+    .output-conversion {
+      margin-top: 1.2em;
+    }
+
+    .footer-links li {
+        font-size: 12px;
+        margin-top: 1em;
+    }
+    
+    .footer-links li:first-child {
+        margin-left: 2em;
+    }
+    
+    .footer-links li:nth-child(2) {
+        margin-right: 2em;
+    }
+    
+    .footer-links li a {
+        font-weight: 600;
+        color: black;
+        text-decoration: none;
+    }
+}
+
+/* Only for medium screen devices */
+@media only screen and (min-width: 651px) and (max-width: 1199px) {
+    .logo img {
+        width: 6.5%;
+    }
+    .input-number{
+        width: 52%;
+    }
+    .select-menu{
+      width: 22%;
+    }
+    /* .select-selected, .select-items {
+      font-size: 16px;
+    } */
+    .triangle-corner {
+        border-left: 15em solid transparent;
+        border-right: 15em solid transparent;
+        border-bottom: 15em solid #3F454A;
+    }
+    .app-description {
+        margin-bottom: 75px;
+    }
+}
+
+/* Only for large screen devices */
+@media only screen and (min-width: 1200px) {
+
+    footer:before {
+        content: '';
+        background: #fff;
+        width: 20%;
+        height: 100%;
+        position: absolute;
+        z-index: 3;
+        left: 0;
+        border: transparent;
+    }
+
+    .footer-links li:first-child {
+        /* margin-left: 2em; */
+        color: black;
+    }
+    .app-description {
+        margin-bottom: 80px;
+    }    
+}
+
+@media only screen and (min-height: 800px) {
+  header {
+    margin-top: 90px;
+  }
+  .app-description {
+    margin-bottom: 120px;
+  }
+}
+
+/* Sweep To Right */
+.hvr-sweep-to-right {
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.hvr-sweep-to-right:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #154261;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-sweep-to-right:hover, .hvr-sweep-to-right:focus, .hvr-sweep-to-right:active {
+  color: white;
+}
+.hvr-sweep-to-right:hover:before, .hvr-sweep-to-right:focus:before, .hvr-sweep-to-right:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
